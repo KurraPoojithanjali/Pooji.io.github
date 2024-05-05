@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Elegance Home</title>
+  </head>
+  <body>
+    <nav>
+      <ul class="nav__links">
+        <li><a href="aboutus.html" target="_blank">ABOUTUS</a></li>
+<li><a href="projects.html" target="_blank">PROJECTS</a></li>
+        <li class="nav__logo">
+          <img src="assets/logo.png" alt="logo" />
+          <h4>ELEGANCE HOME</h4>
+          <p>DECORATORS</p>
+        </li>
+  <li><a href="services.html" target="_blank">SERVICES</a></li>
+     <li><a href="contact.html" target="_blank">CONTACT</a></li>
+      </ul>
+    </nav>
+    <header class="header">
+      <div class="section__container header__container">
+        <div class="header__content">
+          <h4>Designs That Define You</h4>
+          <h1> <span>Designs as unique as you are </span></h1>
+        </div>
+      </div>
+    </header>
+
+    <section class="section__container about__container">
+      <div class="about__content">
+        <p>
+           Welcome to our Elegance Home, where every space is a canvas awaiting transformation. With meticulous attention to detail and a passion for creating personalized environments, we specialize in crafting homes and commercial spaces that reflect your unique style and aspirations. From conceptualization to execution, our dedicated team is committed to turning your vision into reality, one design element at a time. Let us embark on this journey together, as we redefine the way you experience your surroundings.       </p>
+        <h4>
+          Our dedicated team works closely with clients to understand vision,
+          preferences, and lifestyle. Whether you're seeking a modern,
+          minimalist, rustic atmosphere, we bring your ideas to life.
+        </h4>
+        <p>
+          From concept to completion, we meticulously curate every aspect of the
+          design process. We carefully select colors, textures, furniture,
+          lighting, and decor elements to achieve the desired ambiance and
+          create a harmonious living environment.
+        </p>
+      </div>
+      <div class="about__image">
+        <img src="assets/about.jpg" alt="about" />
+      </div>
+    </section>
+
+    <section class="banner">
+      <div class="section__container banner__container">
+        <h4>Elegance Design Studio</h4>
+        <p>Focus on your style & specialty.</p>
+      </div>
+    </section>
+
+    <section class="section__container display__container">
+      <div class="display__col">
+        <img src="assets/display-1.jpg" alt="display" />
+        <div class="display__content">
+          <p>view our</p>
+          <h4><li><a href="portfolio.html" target="_blank">PORTFOLIO</a></li></h4>
+        </div>
+        <img src="assets/display-2.jpg" alt="display" />
+      </div>
+      <div class="display__col">
+        <div class="display__content">
+          <h4><li><a href="aboutus.html" target="_blank">ABOUT US</a></li></h4>
+          <p>who are we</p>
+        </div>
+        <img src="assets/display-3.jpg" alt="display" />
+        <div class="display__content">
+          <h4><li><a href="services.html" target="_blank">SERVICES</a></li></h4>
+          <p>what we do </p>
+        </div>
+      </div>
+      <div class="display__col">
+        <img src="assets/display-4.jpg" alt="display" />
+        <div class="display__content">
+          <p>send us a</p>
+          <h4><li><a href="contact.html" target="_blank">MESSAGE</a></li></h4>
+        </div>
+        <img src="assets/display-5.jpg" alt="display" />
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="section__container footer__container">
+<img src="assets/logo.png" alt="footer logo" width="100" height="100" />      
+        <h4>Ready to start your home decorating project?</h4>
+        <p>
+          Take the first step towards transforming your home by reaching out to
+          us for a consultation. Let us embark on this exciting journey together
+          to create a space that truly represents your style, personality, and
+          aspirations.
+        </p>
+        <button id="scheduleButton">SCHEDULE YOUR CALL</button>
+<input type="datetime-local" id="dateTimeInput">
+      </div>
+    </footer>
+    <div class="footer__bar">
+      <p>Copyright © 2023 Elegance Homes. All rights reserved.</p>
+    </div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var scheduleButton = document.getElementById("scheduleButton");
+  var dateTimeInput = document.getElementById("dateTimeInput");
+  
+  if (scheduleButton && dateTimeInput) {
+    scheduleButton.addEventListener("click", function() {
+      // Get the selected date and time from the input field
+      var selectedDateTime = new Date(dateTimeInput.value);
+
+      // Check if a valid date and time were selected
+      if (!isNaN(selectedDateTime.getTime())) {
+        var date = selectedDateTime.toDateString(); // Convert to a human-readable date string
+        var time = selectedDateTime.toLocaleTimeString(); // Convert to a human-readable time string
+
+        // Display a message with the scheduled date and time
+        alert("Your call has been scheduled for " + date + " at " + time + ". We will contact you shortly.");
+      } else {
+        // If the selected date and time are invalid, display an error message
+        alert("Please select a valid date and time for scheduling the call.");
+      }
+    });
+  }
+});
+</script>
+
+  </body>
+</html>
